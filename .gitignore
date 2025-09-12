@@ -49,7 +49,6 @@ out/
 
 # Svelte
 __sapper__/
-public/
 
 # Storybook
 .storybook/
