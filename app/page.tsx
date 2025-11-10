@@ -4,114 +4,13 @@ import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import DotGridShader from "@/components/DotGridShader"
 
-import ProjectCard from "@/components/project-card"
 import AnimatedHeading from "@/components/animated-heading"
 import RevealOnView from "@/components/reveal-on-view"
+import HeroCard from "@/components/cards/hero-card"
+import ProblemCard from "@/components/cards/problem-card"
+import SolutionCard from "@/components/cards/solution-card"
 
 export default function Page() {
-  const projects = [
-    {
-      title: "Patients Slip Through the Cracks",
-      subtitle:
-        "Nearly 40% of new patients never finish your intake forms. They get overwhelmed, drop off, and end up booking somewhere else. For most practices, that means dozens of lost opportunities every month—not because of your care, but because of a broken process before they ever walk in the door",
-      imageSrc: "/images/project-1.webp", // Using same background as card 3
-      tags: ["Lost Patients", "Missed Revenue", "Incomplete Forms"],
-      href: "#",
-      priority: true,
-      gradientFrom: "#7f1d1d",
-      gradientTo: "#dc2626",
-    },
-    {
-      title: "Your Team Is Stuck Doing Data Entry",
-      subtitle:
-        "Your staff spend hours each day re-typing the same patient information into multiple systems—EHRs, insurance portals, calendars, billing platforms. It’s repetitive, error-prone, and exhausting. That wasted time adds up to tens of thousands in labor costs annually, not to mention the burnout from doing robotic work instead of helping patients.",
-      imageSrc: "/images/project-1.webp", // Using same background as card 3
-      tags: ["Wasted Hours", "Manual Work", "Staff Burnout"],
-      href: "#",
-      priority: false,
-      gradientFrom: "#92400e",
-      gradientTo: "#f59e0b",
-    },
-    {
-      title: "Flying Blind on Marketing Spend",
-      subtitle:
-        "Practices invest thousands every month into Google Ads, Psychology Today, and other referral sources—but have no clear picture of what’s actually working. Without visibility, it’s impossible to double down on the channels that bring quality patients and cut the ones that don’t. The result? Marketing dollars disappear with little to show for it.",
-      imageSrc: "/images/project-1.webp",
-      tags: ["No Visibility", "Ad Waste", "Poor ROI"],
-      href: "#",
-      priority: false,
-      gradientFrom: "#1f2937",
-      gradientTo: "#6b7280",
-    },
-    {
-      title: "So What Do We Offer?",
-      subtitle:
-        "One Platform. Everything Connected. Stop losing patients to broken intake processes. Start converting at 85%+ with forms that actually work. Watch patient data flow seamlessly into your EHR. Finally see which marketing channels bring your best patients.",
-      imageSrc: "/images/project-1.webp", // Using same background as card 3
-      tags: ["One Platform", "Everything Connected", "85% Conversion"],
-      href: "#solution",
-      priority: false,
-      gradientFrom: "#0f172a",
-      gradientTo: "#4f46e5",
-      isTransition: true,
-    },
-    {
-      title: "Smarter Forms That Patients Finish",
-      subtitle:
-        "Create HIPAA-compliant intake forms in minutes with our drag-and-drop builder and healthcare-ready templates. The AI Copilot helps at every step—suggesting better question flow, flagging PHI issues, and even generating form components from plain English. Patients only see what’s relevant, so they actually complete the process instead of dropping off",
-      imageSrc: "/images/project-1.webp", // Using same background as card 3
-      tags: ["Patient-Friendly Design", "HIPAA-Ready Templates", "Higher Completion Rates"],
-      href: "#ai-features",
-      priority: false,
-      gradientFrom: "#0f172a",
-      gradientTo: "#8b5cf6",
-    },
-    {
-      title: "Automations That Do the Work for You",
-      subtitle:
-        "Fastform connects seamlessly to your EHR, scheduling, billing, and communication tools. With AI-powered workflows, data flows where it belongs—insurance gets verified automatically, appointments book themselves, and records stay up to date. No more copy-paste, no more errors, and hours of staff time saved every day.",
-      imageSrc: "/images/project-2.webp",
-      tags: ["Zero Manual Entry", "Error-Free Sync", "Time Savings"],
-      href: "#beautiful-forms",
-      priority: false,
-      gradientFrom: "#0f172a",
-      gradientTo: "#6d28d9",
-    },
-    {
-      title: "AI That Builds and Engages",
-      subtitle:
-        "AI works in two powerful ways with Fastform - Copilot for Builders: AI guides you while you design, optimize, and stay HIPAA-compliant. AI Agents for Patients: Add chatbots and assistants directly into your apps—answering FAQs, or guiding intake. This dual approach means AI helps you build faster and gives your patients a smarter, more engaging experience",
-      imageSrc: "/images/project-3.webp",
-      tags: ["AI Copilot for Builders", "In-App AI Agents", "Smarter Patient Experience"],
-      href: "#perfect-sync",
-      priority: false,
-      gradientFrom: "#111827",
-      gradientTo: "#2563eb",
-    },
-    {
-      title: "Insights That Eliminate Guesswork",
-      subtitle:
-        " Finally understand what’s working. Fastform’s analytics show exactly which marketing channels bring real patients, where forms cause drop-offs, non-HIPAA compliant components, and how changes impact conversion, so you can continuously improve without the guesswork.",
-      imageSrc: "/images/project-4.webp",
-      tags: ["Better Understanding", "Drop-Off Analysis", "HIPAA compliance monitor"],
-      href: "#smart-insights",
-      priority: false,
-      gradientFrom: "#0b132b",
-      gradientTo: "#5bc0be",
-    },
-    {
-      title: "Import & Deploy in One Click",
-      subtitle:
-        "Already have a Next.js project? Import it directly into Fastform, let AI analyze and optimize the structure, then deploy with a single click. No DevOps required. Whether you’re starting fresh or migrating an existing app, Fastform takes you from code to production in minutes.",
-      imageSrc: "/images/project-5.webp",
-      tags: ["Next.js Ready", "One-Click Deployment"],
-      href: "#psychiatry-template",
-      priority: false,
-      gradientFrom: "#0f172a",
-      gradientTo: "#10b981",
-    },
-  ]
-
   return (
     <main className="bg-neutral-950 text-white">
       {/* HERO: full-viewport row. Left is sticky; right scrolls internally. */}
@@ -173,25 +72,11 @@ export default function Page() {
             </RevealOnView>
           </aside>
 
-          {/* RIGHT: simplified, no internal card or horizontal carousel */}
+          {/* RIGHT */}
           <div className="space-y-4">
-            {projects.map((p, idx) => (
-              <ProjectCard
-                key={p.title}
-                title={p.title}
-                subtitle={p.subtitle}
-                imageSrc={p.imageSrc}
-                tags={p.tags}
-                href={p.href}
-                priority={p.priority}
-                gradientFrom={p.gradientFrom}
-                gradientTo={p.gradientTo}
-                imageContainerClassName="lg:h-full"
-                containerClassName="lg:h-[calc(100svh-2rem)]"
-                revealDelay={idx * 0.06}
-                isTransition={p.isTransition}
-              />
-            ))}
+              <HeroCard/>
+              <ProblemCard/>
+              <SolutionCard/>
           </div>
         </div>
       </section>
