@@ -15,9 +15,6 @@ import {
 } from "lucide-react"
 import { motion } from "framer-motion"
 
-
-
-// Server Component (no client hooks)
 export default function SolutionCard() {
   const tags = ["Lost Patients", "Missed Revenue", "Incomplete Forms"]
 
@@ -42,7 +39,7 @@ export default function SolutionCard() {
         <div className="relative bg-black rounded-[1.35rem] lg:h-full overflow-hidden">
           {/* Image */}
           <div
-            className={"relative w-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto lg:h-full"}
+            className={"relative w-full aspect-4/3 sm:aspect-video lg:aspect-auto lg:h-full"}
           >
             <Image
               src={"/images/project-1.webp"}
@@ -53,7 +50,7 @@ export default function SolutionCard() {
               className="opacity-44 brightness-90 object-cover"
             />
             {/* Subtle vignette */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/30 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/20 via-transparent to-black/30 pointer-events-none" />
           </div>
 
           {/* Top-left tags */}

@@ -56,7 +56,7 @@ export default function ProblemCard() {
       >
         <div className="relative bg-black rounded-[1.35rem] lg:h-full overflow-hidden transition-all duration-700">
           {/* Background Image */}
-          <div className="relative w-full lg:h-full aspect-[4/3] sm:aspect-[16/9] lg:aspect-auto">
+          <div className="relative w-full lg:h-full aspect-4/3 sm:aspect-video lg:aspect-auto">
             <Image
               src={slide.imageSrc}
               alt={slide.title}
@@ -65,7 +65,7 @@ export default function ProblemCard() {
               priority
               className="opacity-44 brightness-70 object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/40 pointer-events-none" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/40 via-transparent to-black/40 pointer-events-none" />
           </div>
 
           {/* Tags */}
