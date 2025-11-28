@@ -9,6 +9,10 @@ import RevealOnView from "@/components/reveal-on-view"
 import HeroCard from "@/components/cards/hero-card"
 import ProblemCard from "@/components/cards/problem-card"
 import SolutionCard from "@/components/cards/solution-card"
+import UseCaseCard from "@/components/cards/use-case"
+import ReviewCard from "@/components/cards/review"
+import PricingCard from "@/components/cards/pricing"
+import FaqCard from "@/components/cards/faq-card"
 
 export default function Page() {
   return (
@@ -67,16 +71,20 @@ export default function Page() {
                   </div>
                 </div>
 
-                
+
               </div>
             </RevealOnView>
           </aside>
 
           {/* RIGHT */}
           <div className="space-y-4">
-              <HeroCard/>
-              <ProblemCard/>
-              <SolutionCard/>
+            <HeroCard />
+            <ProblemCard />
+            <SolutionCard />
+            <UseCaseCard />
+            <ReviewCard />
+            <PricingCard />
+            <FaqCard />
           </div>
         </div>
       </section>

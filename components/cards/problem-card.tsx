@@ -8,7 +8,6 @@ import { useState, useEffect } from "react";
 
 export default function ProblemCard() {
   const [current, setCurrent] = useState(0);
-  const [isTransition, setIsTransition] = useState(false);
 
   const slides = [
     {

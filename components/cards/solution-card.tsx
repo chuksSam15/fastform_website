@@ -1,10 +1,8 @@
 'use client'
 
 import Image from "next/image"
-import { ChevronDown } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import RevealOnView from "@/components/reveal-on-view"
-import { useState } from "react"
 import {
   Palette,
   UserCircle,
@@ -16,7 +14,7 @@ import {
 import { motion } from "framer-motion"
 
 export default function SolutionCard() {
-  const tags = ["Lost Patients", "Missed Revenue", "Incomplete Forms"]
+  const tags = ["Beautiful Forms", "HIPAA compliant", "Reliable Integrations"]
 
   const offerings = [
     { icon: Palette, text: "Beautiful branded forms in minutes" },

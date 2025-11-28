@@ -3,10 +3,9 @@
 import Image from "next/image"
 import { Badge } from "@/components/ui/badge"
 import RevealOnView from "@/components/reveal-on-view"
-import { useState } from "react"
 
 export default function ProjectCard() {
-  const tags = ["Lost Patients", "Missed Revenue", "Incomplete Forms"]
+  const tags = ["Patient-Facing", "HIPAA-Compliant", "Secure software"]
 
   return (
     <article className={"group relative lg:h-[calc(100svh-2rem)]"}>
